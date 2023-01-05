@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\lenovo\documents\std\tubes\main.cpp
+	<iostream>
+
+1672923082 source:y:\university\tubes\main.cpp
+	"tubes.h"
+
+1672923067 y:\university\tubes\tubes.h
+	<iostream>
+
+1672923090 source:y:\university\tubes\tubes.cpp
+	"tubes.h"
+
