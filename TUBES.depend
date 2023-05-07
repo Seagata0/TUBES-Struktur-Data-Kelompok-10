@@ -2,12 +2,12 @@
 1584205420 source:c:\users\lenovo\documents\std\tubes\main.cpp
 	<iostream>
 
-1672923082 source:y:\university\tubes\main.cpp
+1673336924 source:y:\university\tubes\main.cpp
 	"tubes.h"
 
-1672923067 y:\university\tubes\tubes.h
+1673180219 y:\university\tubes\tubes.h
 	<iostream>
 
-1672923090 source:y:\university\tubes\tubes.cpp
+1673336631 source:y:\university\tubes\tubes.cpp
 	"tubes.h"
 

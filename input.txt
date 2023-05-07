@@ -1,0 +1,126 @@
+1
+8
+Leonardo DiCaprio
+American
+11/11/1974
+L
+Mark Ruffalo
+American
+22/11/1967
+L
+Tom Holland
+British
+01/06/1996
+L
+Benedict Cumberbatch
+British
+19/07/1976
+L
+Willem Dafoe
+American
+22/07/1955
+L
+Tobey Maguire
+American
+27/06/1975
+L
+Kate Winslet
+British
+05/10/1975
+P
+Christian Bale
+Welsh
+30/01/1974
+L
+y
+2
+7
+Spider-Man: No Way Home
+001
+Action,Adventure,Fantasy
+Jon Watts
+Shutter Island
+002
+Mystery,Thriller
+Martin Scorsese
+Titanic
+003
+Drama,Romance
+James Cameron
+Spider-Man
+004
+Action,Adventure,Sci-Fi
+Sam Raimi
+The Prestige
+005
+Drama,Mystery,Sci-Fi
+Christopher Nolan
+The Imitation Game
+006
+Biography,Drama,Thriller
+Morten Tyldum
+Avengers: Endgame
+007
+Action,Adventure,Drama
+Russo Brothers
+y
+6
+Tom Holland
+Spider-Man: No Way Home
+y
+6
+Benedict Cumberbatch
+Spider-Man: No Way Home
+y
+6
+Willem Dafoe
+Spider-Man: No Way Home
+y
+6
+Tobey Maguire
+Spider-Man: No Way Home
+y
+6
+Mark Ruffalo
+Shutter Island
+y
+6
+Leonardo DiCaprio
+Shutter Island
+y
+6
+Leonardo DiCaprio
+Titanic
+y
+6
+Kate Winslet
+Titanic
+y
+6
+Tobey Maguire
+Spider-Man
+y
+6
+Willem Dafoe
+Spider-Man
+y
+6
+Christian Bale
+The Prestige
+y
+6
+Benedict Cumberbatch
+The Imitation Game
+y
+6
+Benedict Cumberbatch
+Avengers: Endgame
+y
+6
+Mark Ruffalo
+Avengers: Endgame
+y
+6
+Tom Holland
+Avengers: Endgame
+y

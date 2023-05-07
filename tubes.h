@@ -5,7 +5,6 @@ using namespace std;
 
 #define last(A) (A).last
 #define first(A) (A).first
-#define nextrelation(p) (p)->nextrelation
 
 struct film{
     string id;
@@ -83,5 +82,9 @@ void disconnect(list_actor &a, string nama, string judul);
 void jumlahFilm(list_actor a,string nama);
 void delActorFilm(list_actor &a, list_film &f, adr_actor p);
 int selectMenu();
+
+
+void checkActor(list_actor a ,adr_actor &p);
+void checkFilm(list_film f, adr_film &p);
 
 #endif // TUBES_H_INCLUDED

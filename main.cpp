@@ -29,7 +29,7 @@ int main(){
                     cin>>data.nation;
                     cout<<"Masukkan Tanggal Lahir(DD/MM/YYYY) : ";
                     cin>>data.tl;
-                    cout<<"Masukkan Jenis Kelamin(L/P)";
+                    cout<<"Masukkan Jenis Kelamin(L/P) : ";
                     data.jk = '0';
                     while (data.jk!='L' && data.jk!='P'){
                         cin>>data.jk;
@@ -48,11 +48,10 @@ int main(){
                 cin>>N;
                 cout<<endl;
                 for(int i=1;i<=N;i++){
-                    int x = 0;
                     cout<<"Data Ke : "<< i <<endl;
                     cout<<"Masukkan data baru "<<endl;
                     cout<<"Masukkan Judul : ";
-                    cin.ignore();
+                    cin.sync();
                     getline(cin, data2.judul);
                     cout<<"Masukkan ID : ";
                     cin>>data2.id;
@@ -62,18 +61,12 @@ int main(){
                     cin.ignore();
                     getline(cin, data2.sutradara);
                     q = createElementFilm(data2);
-                    cout<<"Dimana anda ingin memasukkan film?"<<endl;
-                    cout<<"1. Menambahkan data film didepan"<<endl;
-                    cout<<"2. Menambahkan data film dibelakang"<<endl;
-                    cout<<"Input : ";
-                    while (x!=1 && x!=2){
-                        cin>>x;
-                    }
-                    if(x==1){
+                    if(first(lfilm) == NULL){
                         insertFirstFilm(lfilm,q);
-                    }else if(x==2){
+                    }else{
                         insertLastFilm(lfilm,q);
                     }
+                    cout<<endl;
                 }
             }
             break;
@@ -82,6 +75,19 @@ int main(){
             break;
         case 4:
             {
+                cout<<"========================="<<endl;
+                adr_film s = first(lfilm);
+                cout<<s->info.judul<<endl;
+                s = s->next;
+                while (s != first(lfilm)){
+                    cout<<s->info.judul<<endl;
+                    s = s->next;
+                }
+                cout<<"========================="<<endl;
+            }
+            break;
+        case 5:
+            {
                 string nama;
                 cout<<"Nama : ";
                 cin.ignore();
@@ -89,18 +95,6 @@ int main(){
                 printFilmDariActor(lactor,nama);
             }
             break;
-        case 5:
-            {
-                string nama,judul;
-                cout<<"Nama Actor : ";
-                cin.ignore();
-                getline(cin, nama);
-                cout<<"Nama Film : ";
-                cin.ignore();
-                getline(cin, judul);
-                connect(lactor,lfilm,nama,judul);
-                break;
-            }
         case 6:
             {
                 string nama,judul;
@@ -108,12 +102,24 @@ int main(){
                 cin.ignore();
                 getline(cin, nama);
                 cout<<"Nama Film : ";
+                cin.sync();
+                getline(cin, judul);
+                connect(lactor,lfilm,nama,judul);
+                break;
+            }
+        case 7:
+            {
+                string nama,judul;
+                cout<<"Nama Actor : ";
                 cin.ignore();
+                getline(cin, nama);
+                cout<<"Nama Film : ";
+                cin.sync();
                 getline(cin, judul);
                 disconnect(lactor,nama,judul);
                 break;
             }
-        case 7:
+        case 8:
             {
                 string nama;
                 cout<<"Nama Actor : ";
@@ -126,7 +132,7 @@ int main(){
                 cout<<"Jenis Kelamin(L/P) : "<<p->info.jk<<endl;
                 break;
             }
-        case 8:
+        case 9:
             {
                 string judul;
                 cout<<"Nama Film : ";
@@ -138,21 +144,14 @@ int main(){
                 cout<<"Genre : "<<p->info.genre<<endl;
                 break;
             }
-        case 9:
-            {
-                string nama;
-                cout<<"Nama Actor : ";
-                cin.ignore();
-                getline(cin, nama);
-                printFilmDariActor(lactor,nama);
-            }
         case 10:
             {
                 string nama;
                 cout<<"Nama Actor : ";
                 cin.ignore();
                 getline(cin, nama);
-                jumlahFilm(lactor,nama);
+                printFilmDariActor(lactor,nama);
+                break;
             }
         case 11:
             {
@@ -160,28 +159,30 @@ int main(){
                 cout<<"Nama Actor : ";
                 cin.ignore();
                 getline(cin, nama);
-                adr_actor p = searchActor(lactor,nama);
-                delActorFilm(lactor,lfilm,p);
+                jumlahFilm(lactor,nama);
+                break;
             }
         case 12:
+            {
+                string nama;
+                cout<<"Nama Actor : ";
+                cin.ignore();
+                getline(cin, nama);
+                adr_actor p = searchActor(lactor,nama);
+                delActorFilm(lactor,lfilm,p);
+                break;
+            }
+        case 13:
             {
                 string nama,judul;
                 cout<<"Nama Actor : ";
                 cin.ignore();
                 getline(cin, nama);
                 cout<<"Nama Film : ";
-                cin.ignore();
+                cin.sync();
                 getline(cin, judul);
                 disconnectdel(lactor,lfilm,nama,judul);
-            }
-        case 13:
-            cout<<last(lfilm)->info.judul<<endl;
-            adr_film s = first(lfilm);
-            cout<<s->info.judul<<endl;
-            s = s->next;
-            while (s != first(lfilm)){
-                cout<<s->info.judul<<endl;
-                s = s->next;
+                break;
             }
         }
         cout<<endl;
